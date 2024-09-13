@@ -29,7 +29,7 @@ endif
 .DEFAULT_GOAL := help
 
 ## Build:
-shutdown_procedure: shutdown_procedure.cpp ../.docker_toolchain_image_hash
+shutdown_procedure: shutdown_procedure.cpp ../.docker_toolchain_image_hash Makefile.toolchain
 	@echo "Building ${YELLOW}$@${RESET} from ${CYAN}$<${RESET}..."
 	$Q docker run $(TOOLCHAIN_DOCKER_OPTIONS) make /result/$@ | sed 's/^/  /'
 	@echo "${BOLD}${GREEN}OK!${RESET}"

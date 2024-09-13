@@ -1,7 +1,7 @@
 FROM --platform=linux/x86_64 debian:latest
 
 RUN apt update && \
-    apt install -y socat gcc-multilib g++-multilib && \
+    apt install -y socat && \
     mkdir -p /challenge
 
 WORKDIR /challenge
