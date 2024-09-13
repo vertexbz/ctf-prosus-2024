@@ -15,7 +15,6 @@ a.k.a. shooting an apple... on somebody's head... riding a horse... blindfolded.
 
 ## Run the target instance
 ```shell
-cd target
 make run
 ```
 
