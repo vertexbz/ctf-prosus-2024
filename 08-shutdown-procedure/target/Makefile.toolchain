@@ -23,7 +23,7 @@ endif
 ## Build:
 shutdown_procedure: shutdown_procedure.cpp ## Compiles vulnerable application
 	@$(CAPTION) "Building ${YELLOW}$@${RESET} from ${CYAN}$^${RESET}... "
-	$Q g++ -m32 -static -Wl,--as-needed -g -fno-stack-protector -z execstack $^ -o $@
+	$Q g++ -s -m32 -g -fno-stack-protector -z execstack $^ -o $@
 	@echo "${BOLD}${GREEN}OK!${RESET}"
 
 ## Prepare:
