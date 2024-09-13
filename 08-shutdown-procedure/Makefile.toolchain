@@ -1,0 +1,60 @@
+# Options
+Q = $(if $(filter 1,$V),,@)
+CAPTION = $(if $(filter 1,$V),echo,printf)
+
+# Predefined
+THIS_MAKEFILE := $(lastword $(MAKEFILE_LIST))
+THIS_DIR := $(abspath $(dir $(THIS_MAKEFILE)))
+
+GREEN  := $(shell tput -Txterm setaf 2 2>/dev/null)
+CYAN   := $(shell tput -Txterm setaf 6 2>/dev/null)
+YELLOW := $(shell tput -Txterm setaf 3 2>/dev/null)
+BOLD   := $(shell tput -Txterm bold 2>/dev/null)
+RESET  := $(shell echo -n "\\033[00m")
+
+# This Makefile assumes that make is being invoked from the Makefile's location.
+ifneq ($(shell pwd),$(THIS_DIR))
+$(error This project requires make to be invoked inside '$(THIS_DIR)')
+endif
+
+# Rules
+.DEFAULT_GOAL := help
+
+
+## Build:
+shellcode.o: shellcode.asm ## Compiles assembly to object file
+	@$(CAPTION) "Building ${YELLOW}$@${RESET} from ${CYAN}$^${RESET}... "
+	$Q nasm -f elf $^
+	@echo "${BOLD}${GREEN}OK!${RESET}"
+
+shellcode: shellcode.o ## Builds shellcode binary
+	@$(CAPTION) "Building ${YELLOW}$@${RESET} from ${CYAN}$^${RESET}... "
+	$Q ld -m elf_i386 -o $@ $^
+	@echo "${BOLD}${GREEN}OK!${RESET}"
+
+## Prepare:
+shellcode.bin: shellcode ## Extracts opcodes of the shellcode
+	@$(CAPTION) "Stripping shellcode ${CYAN}$^${RESET} to ${YELLOW}$@${RESET}... "
+	$Q objdump -d $^ | grep "^ " | cut -f2 | tr -d ' ' | tr -d '\n' | xxd -r -p > $@
+	@echo "${BOLD}${GREEN}OK!${RESET}"
+
+/result/shellcode.bin: shellcode.bin
+	@$(CAPTION) "Moving shellcode ${CYAN}$^${RESET} to ${YELLOW}$@${RESET}... "
+	$Q mv -f $^ $@
+	@echo "${BOLD}${GREEN}OK!${RESET}"
+
+
+## Help:
+.PHONY: help
+help: ## Show this help (default target)
+	@echo 'Usage:'
+	@echo '  ${BOLD}make ${YELLOW}<target>${RESET}'
+	@echo ''
+	@echo 'Targets:'
+	@awk 'BEGIN {FS = ":.*?## "} { \
+		if (/^[.a-zA-Z_-]+:.*?##.*$$/) {printf "    ${BOLD}${YELLOW}%-20s${RESET}${GREEN}%s${RESET}\n", $$1, $$2} \
+		else if (/^## .*$$/) {printf "  ${CYAN}%s${RESET}\n", substr($$1,4)} \
+		}' $(THIS_MAKEFILE)
+	@echo ''
+	@echo 'You can set V environment variable to 1 to enable verbose output.'
+	@echo ''
