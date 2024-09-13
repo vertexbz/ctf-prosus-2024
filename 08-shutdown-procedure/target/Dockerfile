@@ -8,4 +8,4 @@ WORKDIR /challenge
 USER nobody
 EXPOSE 1337
 
-CMD ["socat", "TCP4-LISTEN:1337,nodelay,fork", "EXEC:/challenge/shutdown_procedure,nofork,pty"]
+CMD ["socat", "TCP4-LISTEN:1337,reuseaddr,fork", "EXEC:/challenge/shutdown_procedure,pty,raw"]
