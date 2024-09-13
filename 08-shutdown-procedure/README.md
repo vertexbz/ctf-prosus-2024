@@ -13,14 +13,22 @@ a.k.a. shooting an apple... on somebody's head... riding a horse... blindfolded.
 - make
 - xxd
 
+## Run the target instance
+```shell
+cd target
+make run
+```
+
 ## Hack it
 ```shell
 make hack
 ```
 
 ## Explore it!
+- [shutdown_procedure.cpp](target/shutdown_procedure.cpp)
 - [injector.py](injector.py)
 - [shellcode.asm](shellcode.asm)
 
 
 - [Makefile](Makefile)
+- [target/Makefile](target/Makefile)

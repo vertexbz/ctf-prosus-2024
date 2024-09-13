@@ -54,6 +54,11 @@ shellcode.bin: shellcode.asm .docker_toolchain_image_hash ## Builds shellcode bi
 shellcode-raw: shellcode.bin ## Prints shellcode hex representation
 	$Q cat shellcode.bin | xxd -g0 -p | tr -d '\n' | sed 's/.\{2\}/\\x&/g' | sed 's/^/Hex representation of the ${CYAN}$^${RESET}:\n\n  /' && echo && echo
 
+## Run:
+.PHONY: run
+run: .docker_toolchain_image_hash ## Runs target instance
+	@cd target && $(MAKE) TARGET_PORT=$(TARGET_PORT) $@
+
 ## Connect:
 .PHONY: connect
 connect: ## Connects with the target
