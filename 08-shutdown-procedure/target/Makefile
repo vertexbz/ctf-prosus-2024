@@ -3,7 +3,8 @@ Q = $(if $(filter 1,$V),,@)
 
 TARGET_PORT = 1337
 
-TARGET_DOCKER_MOUNTS := -v `pwd`/shutdown_procedure.cpp:/challenge/shutdown_procedure.cpp:ro -v `pwd`/shutdown_procedure:/challenge/shutdown_procedure:ro
+BINARY = shutdown_procedure
+TARGET_DOCKER_MOUNTS := -v `pwd`/shutdown_procedure.cpp:/challenge/shutdown_procedure.cpp:ro -v `pwd`/$(BINARY):/challenge/shutdown_procedure:ro
 TARGET_DOCKER_OPTIONS :=  -p $(TARGET_PORT):1337 --platform=linux/x86_64 --rm $(TARGET_DOCKER_MOUNTS) `cat .docker_target_image_hash`
 
 TOOLCHAIN_DOCKER_MOUNTS := -v `pwd`:/result -v `pwd`/shutdown_procedure.cpp:/work/shutdown_procedure.cpp:ro -v `pwd`/Makefile.toolchain:/work/Makefile:ro

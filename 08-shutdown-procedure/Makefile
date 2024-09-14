@@ -62,6 +62,10 @@ shellcode-raw: shellcode.bin ## Prints shellcode hex representation
 run: .docker_toolchain_image_hash ## Runs target instance
 	@cd target && $(MAKE) TARGET_PORT=$(TARGET_PORT) $@
 
+.PHONY: run-orig
+run-orig: .docker_toolchain_image_hash ## Runs target instance (with original challenge binary)
+	@cd target && $(MAKE) TARGET_PORT=$(TARGET_PORT) BINARY=shutdown_procedure-orig run
+
 ## Connect:
 .PHONY: connect
 connect: ## Connects with the target
@@ -85,6 +89,10 @@ hack: shellcode.bin exploit.py ## Injects, executes shellcode on the target, ope
 .PHONY: hack-live
 hack-live: shellcode.bin exploit.py ## Injects, executes shellcode on the target, opens shell access (live challenge)
 	@$(MAKE) TARGET_HOST=$(LIVE_HOST) TARGET_ADDR=$(LIVE_ADDR) hack
+
+.PHONY: hack-orig
+hack-orig: shellcode.bin exploit.py ## Injects, executes shellcode on the target, opens shell access (with original challenge binary)
+	@$(MAKE) TARGET_PORT=$(TARGET_PORT) ORIG=1 TARGET_ADDR=$(LIVE_ADDR) hack
 
 
 ## Cleanup:
