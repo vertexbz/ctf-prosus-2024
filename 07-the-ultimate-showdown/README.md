@@ -19,6 +19,8 @@
   - %A@ - last access time
   - %C@ - last status change time
 
+- [binwalk](https://github.com/ReFirmLabs/binwalk) (https://formulae.brew.sh/formula/binwalk) 
+
 ## Interesting stuff found after CTF
 - https://book.hacktricks.xyz/linux-hardening/useful-linux-commands
 - https://book.hacktricks.xyz/linux-hardening/privilege-escalation
