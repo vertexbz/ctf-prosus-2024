@@ -1,4 +1,4 @@
-# Target exploration
+# Privilege escalation
 
 - Any (sticky) directory without read is good place to pass things around if env is shared (**FFS**!)
 
