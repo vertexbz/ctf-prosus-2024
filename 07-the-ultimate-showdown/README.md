@@ -19,7 +19,7 @@
   - %A@ - last access time
   - %C@ - last status change time
 
-## Interesting stuff found after CTF:
+## Interesting stuff found after CTF
 - https://book.hacktricks.xyz/linux-hardening/useful-linux-commands
 - https://book.hacktricks.xyz/linux-hardening/privilege-escalation
 - https://book.hacktricks.xyz/linux-hardening/bypass-bash-restrictions
