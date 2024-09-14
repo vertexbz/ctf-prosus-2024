@@ -48,7 +48,7 @@ toolchain-exec: .docker_toolchain_image_hash ## Runs toolchain docker image with
 	$Q docker run -it $(DOCKER_OPTIONS) bash
 
 ## Shellcode:
-shellcode.bin: shellcode.asm .docker_toolchain_image_hash ## Builds shellcode binary using toolchain docker image
+shellcode.bin: shellcode.asm .docker_toolchain_image_hash Makefile.toolchain ## Builds shellcode binary using toolchain docker image
 	@echo "Building ${YELLOW}$@${RESET} from ${CYAN}$<${RESET}..."
 	$Q docker run $(DOCKER_OPTIONS) make /result/$@ | sed 's/^/  /'
 	@echo "${BOLD}${GREEN}OK!${RESET}"
