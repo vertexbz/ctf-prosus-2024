@@ -11,6 +11,7 @@
 - docker
 
 ### Run
+Default port: `8080`
 ```shell
-./run.sh
+./run.sh [port]
 ```
