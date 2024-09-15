@@ -10,4 +10,4 @@ if [ "$(pwd)" != "$SCRIPT_DIR" ]; then
 fi
 
 PORT=${1:-8080}
-exec docker run --rm -it -p "${PORT}":9090 -v `pwd`/data:/data --workdir /data php:8.2-cli php -S 0.0.0.0:9090 index.php
+exec docker run --rm -it -p "${PORT}":8080 -v "$(pwd)/data":/data --workdir /data php:8.3.10-cli php -S 0.0.0.0:8080 index.php
