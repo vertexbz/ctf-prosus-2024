@@ -1,0 +1,14 @@
+{
+  "name": "TamaCore",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "author": "TamaBandaiPal",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

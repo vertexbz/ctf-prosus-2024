@@ -7,7 +7,7 @@ const PORT = 8080;
 const fs = require("fs");
 const express = require("express")
 const app = express();
-const secret = "TAMA{salvation}";
+const secret = "[[DELETED! Leaked in previous commit]]";
 
 app.use("/img/", express.static('./img'))
 
@@ -56,3 +56,5 @@ app.listen(PORT, (err) => {
         console.error(err);
     }
 })
+
+process.on('SIGINT', () => process.exit());
