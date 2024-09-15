@@ -9,3 +9,7 @@ If you want to avoid spoilers... don't look into anything but `.md` files... and
 - [8. Shutdown sequence](08-shutdown-procedure)
 
 ## Available in memories
+- [3. SECURITY ALERT](03-security-alert)
+- [4. The mainframe](04-the-mainframe)
+- [5. Satellite command](05-satellite-command)
+- [6. HELP ME](06-help-me)
