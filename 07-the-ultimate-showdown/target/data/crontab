@@ -1,0 +1,3 @@
+* * * * *   root    /usr/bin/python3 /opt/backup_service/main.py >> /var/log/backup_service.log
+*/5 * * * * root    rm -rf /tmp/*
+*/5 * * * * root    /root/reset_service.sh
