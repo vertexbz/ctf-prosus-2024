@@ -1,0 +1,109 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">    <style>
+        #box {
+            background-color: black;
+            color: white;
+            border: 2px solid white;
+            border-radius: 10px;
+            margin-top: 300px;
+            z-index: 1;
+            width: 600px;
+            padding: 20px;
+        }
+        #icons {
+            font-size: 20px;
+            padding: 5px;
+        }
+
+        #bg_video {
+            position: fixed;
+            right: 0;
+            z-index: -1;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <center>
+        <div id="box">
+            <h3>Satellite Login</h3>
+            <br/>
+            <form action="/login" method="post">
+                <i class="bi bi-person-gear" id="icons"></i><input type="text" name="username" placeholder="Username" required>
+                <i class="bi bi-key-fill" id="icons"></i><input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </center>
+
+    <video autoplay muted loop id="bg_video">
+        <source src="img/bg_video.mp4" type="video/mp4">
+    </video>
+
+
+
+
+</body>
+
+</html>
+
+<!--
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            position: fixed;
+            /* Use fixed or absolute positioning */
+            top: 0;   left: 0;   width: 100%;
+            height: 100%;   background-image: url('./img/login_bg.png');
+            background-size: 100%;
+            /* Cover the entire viewport */
+            background-position: center;
+            /* Center the image */
+            background-repeat: no-repeat;
+            /* Do not repeat the image */
+        }
+        #box {
+            background-color: black;
+            color: white;
+            border: 2px solid white;
+            border-radius: 10px;
+            margin-top: 300px;
+            width: 600px;
+            padding: 20px;
+        }
+        #icons {
+            font-size: 20px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <center>
+        <div id="box">
+            <h3>Satellite Login</h3>
+            <br/>
+            <form action="/login" method="post">
+                <i class="bi bi-person-gear" id="icons"></i><input type="text" name="username" placeholder="Username" required>
+                <i class="bi bi-key-fill" id="icons"></i><input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </center>
+
+</body>
+
+</html>
+
+
+-->
