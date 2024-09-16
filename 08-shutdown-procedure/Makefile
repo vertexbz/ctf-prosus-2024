@@ -92,7 +92,7 @@ hack-live: shellcode.bin exploit.py ## Injects, executes shellcode on the target
 
 .PHONY: hack-orig
 hack-orig: shellcode.bin exploit.py ## Injects, executes shellcode on the target, opens shell access (with original challenge binary)
-	@$(MAKE) TARGET_PORT=$(TARGET_PORT) ORIG=1 TARGET_ADDR=$(LIVE_ADDR) hack
+	@$(MAKE) TARGET_PORT=$(TARGET_PORT) TARGET_ADDR=$(LIVE_ADDR) hack
 
 
 ## Cleanup:
