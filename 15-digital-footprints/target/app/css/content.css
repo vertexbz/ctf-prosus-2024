@@ -1,0 +1,60 @@
+/* @(#)$Id: content.css 1 2012-11-15 10:50:30Z steven $
+ *
+ * (c) 2010 AMS-IX B.V.
+ *
+ * Set styles in #content block back to defaults. The defaults
+ * here come from HTML 4:
+ *
+ *  http://www.w3.org/TR/CSS2/sample.html
+ *
+ */
+
+#content h1                             { font-size: 2.00em; margin: .67em 0 }
+#content h2                             { font-size: 1.50em; margin: .75em 0 }
+#content h3                             { font-size: 1.17em; margin: .83em 0 }
+#content h4,         #content p,
+#content blockquote, #content ul,
+#content fieldset,   #content form,
+#content ol,         #content dl,
+#content dir,        #content menu      { margin: 1.12em 0 }
+#content h5                             { font-size: .83em; margin: 1.5em 0 }
+#content h6                             { font-size: .75em; margin: 1.67em 0 }
+#content h1, #content h2, #content h3,
+#content h4, #content h5, #content h6,
+#content b,  #content strong            { font-weight: bolder }
+#content blockquote                 { margin-left: 40px; margin-right: 40px }
+#content big                                { font-size: 1.17em }
+#content small, #content sub, #content sup  { font-size: .83em }
+#content sub                                { vertical-align: sub }
+#content sup                                { vertical-align: super }
+#content table                              { border-spacing: 2px; }
+#content thead, #content tbody,
+#content tfoot                              { vertical-align: middle }
+#content td, #content th, #content tr       { vertical-align: inherit }
+#content hr                                 { border: none }
+#content ol, #content ul, #content dir,
+#content menu, #content dd                  { margin-left: 40px }
+#content ol                                 { list-style-type: decimal }
+#content ol ul, #content ul ol,
+#content ul ul, #content ol ol              { margin-top: 0; margin-bottom: 0 }
+
+/*
+     FILE ARCHIVED ON 09:45:56 Sep 17, 2015 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 09:57:46 Oct 31, 2024.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.61
+  exclusion.robots: 0.03
+  exclusion.robots.policy: 0.018
+  esindex: 0.011
+  cdx.remote: 30.969
+  LoadShardBlock: 95.805 (3)
+  PetaboxLoader3.datanode: 68.07 (4)
+  PetaboxLoader3.resolve: 117.803 (2)
+  load_resource: 106.933
+*/

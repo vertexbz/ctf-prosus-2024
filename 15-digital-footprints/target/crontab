@@ -1,0 +1,1 @@
+*/2 * * * * proftpd echo "ProFTPd service running...(Log retention set to 2 minutes)" > /var/log/proftpd/proftpd.log

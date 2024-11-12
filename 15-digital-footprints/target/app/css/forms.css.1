@@ -1,0 +1,106 @@
+/*
+    @(#)$Id: forms.css 18 2013-09-16 14:09:41Z steven $
+
+    Copyright (c) AMS-IX B.V.; all rights reserved.
+
+    sb:14.09.2004
+
+    CSS specs for the AMS-IX web site.
+
+    This file defines various styles for forms. It also adds a "button"
+    class for <a> links, that looks very similar the the "submit" button
+    style.
+ */
+
+/* Button styles */
+input[type="submit"], input[type="reset"], input[type="button"],
+span.button, a.button, a.button:link, a.button:visited {
+    border: 1px solid #404040;
+    font-weight: bold;
+    background-color: #d0d0d0;
+    color: #404040;
+    font-family: 'Bitstream Vera Sans',Verdana,sans-serif;
+    font-size: smaller;
+    text-decoration:none;
+    border-radius: 5px 5px 5px 5px;
+    vertical-align: baseline;
+}
+span.button, a.button {
+    padding-left: 2px;
+    padding-right: 2px;
+}
+span.button { color: #f0f0f0 }
+
+input[type="text"] {
+    font-size: 1em;
+}
+
+form table td {
+    padding-top: 2px;
+    padding-right: 2px;
+}
+
+input[type="submit"]:hover, input[type="submit"]:focus,
+input[type="button"]:hover, input[type="button"]:focus,
+input[type="reset"]:hover, input[type="reset"]:focus,
+a.button:hover, a.button:focus {
+    border: 1px solid #404040;
+    font-weight: bold;
+    color: white;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+}
+
+/* Input styles */
+input[type="text"], input[type="password"] {
+    border: 1px solid #404040;
+}
+input[type="text"], input[type="password"], select {
+    background-color: #f0f0f0;
+    color: #404040;
+    font-family: 'Bitstream Vera Sans',Verdana,sans-serif;
+    font-size: 100%;
+    border-radius: 2px 2px 2px 2px;
+}
+input[type="text"]:focus, input[type="password"]:focus {
+    background-color: white;
+    color: black;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+option {
+    background-color: #f0f0f0;
+    color: #404040;
+    font-family: 'Bitstream Vera Sans',Verdana,sans-serif;
+    font-size: smaller;
+}
+
+/* "Special" styles that are used to indicate "public" and "missing/bad"
+ * fields in a form */
+.form-missing {
+    color: red;
+    font-weight: bold;
+}
+.form-public {
+    color: green;
+}
+
+/*
+     FILE ARCHIVED ON 09:45:57 Sep 17, 2015 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 09:58:02 Oct 31, 2024.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.535
+  exclusion.robots: 0.03
+  exclusion.robots.policy: 0.019
+  esindex: 0.01
+  cdx.remote: 9.36
+  LoadShardBlock: 49.281 (3)
+  PetaboxLoader3.datanode: 68.568 (4)
+  load_resource: 93.515
+  PetaboxLoader3.resolve: 68.3
+*/

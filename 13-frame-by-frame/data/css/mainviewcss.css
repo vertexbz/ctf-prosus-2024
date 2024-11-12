@@ -1,0 +1,75 @@
+body {margin-top: 0px;margin-bottom: 0px;margin-left: 0px;margin-right: 0px;background-color: #EFF3FF;}
+body,td,th {font-family: Arial, Helvetica, sans-serif;font-size: 12px;}
+.bodyDivs {position:absolute;width:500px;height:260px;background:#EDEDED;left:110px;}
+.button
+{
+    border-right: #a2a2a2 1px solid;
+    border-top: #ffffff 1px solid;
+    border-left: #ffffff 1px solid;
+    border-bottom: #a2a2a2 1px solid;
+    font-size: 12px; font-family:  "Arial","Verdana";
+    background: #cccccc; color: #333333;
+    cursor: hand; padding-top: 3px;
+    height: 21px;width: 65px;
+}
+.butHr {position:relative; width:100%; height:15px; left:0px;}
+.butDiv {position:relative; width:100%; height:50px; left:0px; top:10px;}
+.butSavDiv {position:relative; width:100%; height:25px; left:0px; text-align:center;}
+.bodyDiv {margin-top:20px;position:absolute;height:628px;width:720px;background:#EDEDED;}
+.td_input {width:176px; height:21px;}
+
+#topout{position:relative;top:0px;left:0px;border:0px;background-repeat:repeat-x;}
+#topin{position:absolute;top:10px;left:15px;}
+#fbtn{overflow:hidden;border-style:solid;border-width:1px;border-color:#e1e1c9 #e1e1c9 #6e6e56 #6e6e56;padding:1 1 1 1;width:115px; height:25px;}
+#fbtn_txt{position:relative;}
+#fbtn_txt div{height:25px;padding-top:11px;font-size:12px;color:#000;text-align:center;cursor:hand;}
+#fbtn_mask{background-color:#ffffff;position:relative;width:100%;height:100%;}
+
+#rRightDown,#rLeftDown,#rLeftUp,#rRightUp,#rRight,#rLeft,#rUp,#rDown{position:relative;background:#000;width:5px; height:5px; z-index:500; font-size:0;}
+#rRightDown{right:0; bottom:0; cursor:move;}
+#rLeftDown{left:0; bottom:0;cursor:move;}
+#rRightUp{right:0; top:0; cursor:move;}
+#rLeftUp{left:0; top:0; cursor:move;}
+#rRight{right:0; top:50%;margin-top:-5px; cursor:e-resize;}
+#rLeft{left:0; top:50%;margin-top:-5px; cursor:e-resize;}
+#rUp{top:0; left:50%;margin-left:-5px; cursor:n-resize;}
+#rDown{bottom:0;left:50%;margin-left:-5px; cursor:n-resize;}
+
+.option2 {
+    float:left; padding:1 1 1 1;
+    width:114px; height:25px;
+    color:#11559c;
+    cursor:hand;
+    line-height:25px; text-align:center;
+    border:1px solid #f00;
+    overflow:hidden; font-size:13px;
+    border-style:solid; border-width:1px;
+    border-color:#e1e1c9 #e1e1c9 #6e6e56 #6e6e56;
+}
+
+#Msgbox{position:absolute;border:2px solid #2257D5;background:#EDEDED;width:200px;height:120px;z-index:10000;}
+#Msgboxclose{position:absolute;top:0px;right:0px;height:20px;width:20px;font-size:12pt;text-align:center;line-height:20px;color:white;
+    background:#e13f0f;cursor:pointer;}
+#Msg{position:relative;width:200px;height:20px;line-height:20px;text-align:center;top:10px;font-size:10pt;}
+#Msgboxbut{position:absolute;width:200px;height:20px;text-align:center;top:90px;}
+#MessageBoxBackground{width:1024px;height:600px;background-color:#fff;position:absolute;left:0px;top:0px;z-index:9999;filter:alpha(opacity=0);border:1px solid #f00;}
+
+.ys_top{width:90px;height:25px;float:left;background-color:#EDEDED;border:1px solid black;text-align:center;margin-left:1px;}
+.ys_top_font{line-height:25px;font-size:14px;}
+.ys_a{margin-left:30px;margin-top:20px;text-align:center ;}
+.ys_dfa{margin-top:-2px;border:2px solid black;width:710px;height:600px;text-align:center ;margin-left:5px;}
+
+.coolBar {background-color: #EDEDED;border-top: 1px  buttonhighlight;   border-left: 1px  buttonhighlight;    border-bottom: 1px  buttonshadow; border-right: 1px  buttonshadow; padding: 2px; font: menu;}
+.coolButton {
+    border: 1px solid buttonface;
+    padding: 1px;
+    text-align: center;
+    cursor:hand;
+    width: 75px;
+    height: 24px;}
+#videowin {position:relative;width:714;height:554px;border:1px solid #f00;left:4px;top:5px;background:#4C4C4C;}
+#box {position:absolute;border:1px solid #000;top:125px;left:185px;width:352px;height:288px;background:#4C4C4C;}
+#butwin {height:585px;position:absolute;width:146px;height:562px;border:0px solid #f00;left:723px;top:0px;}
+.left{float:left;text-align:center;border:1px solid #000;background-color:#4c4c4c;margin-top:5px;margin-left:3px;}
+.right{float:right;text-align:center;border:0px solid #f00;margin-top:5px;}
+.leftbut{position:relative;height:300px;width:146px;border:0px solid #f00;left:4px;top:0px;}

@@ -1,0 +1,147 @@
+/*
+    @(#)$Id: general.css 14 2013-04-16 10:06:16Z steven $
+
+    Copyright (c) AMS-IX B.V.; all rights reserved.
+
+    sb:14.09.2004
+
+    CSS specs for the AMS-IX web site.
+ */
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+	font-family:  'Arial', sans-serif;
+	font-size:    9pt;
+}
+
+#page {
+    margin: 0 5px 5px 5px;
+}
+
+#header {
+    height: 110px;
+    position: relative;
+}
+
+#header p,div,span,img {
+    padding: 0;
+    margin: 0;
+    border-style: none;
+    vertical-align: baseline;
+}
+
+#header h1 {
+    position: absolute;
+    top: 12px;
+    left: 20px;
+}
+
+#header h1 span { display: none; }
+
+#header h2 {
+    position: absolute;
+    right: 100px;
+    top: 85px;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 10pt;
+    font-weight: normal;
+}
+
+#content-wrapper {
+    background-color: white;
+    min-width: 960px;
+    width: 100%;
+
+    padding: 5px 0 0 0;
+    margin: 1px 0 0 0;
+
+    position: relative;
+    display: block;
+}
+
+#column1 {
+    margin: 0;
+    width: 200px;
+    clear: both;
+    float: left;
+    top: 0px;
+}
+
+/* #column2 is meant to place the second column to the left
+ * of #column1. Inside, we use #content.
+ */
+#column2 {
+    margin: 0 0 0 205px;
+    /*
+    float: left;
+    border: 1px solid yellow;
+    */
+}
+
+#content {
+    margin: 20px 1.5em 2em 1.5em;
+}
+
+#footer {
+    padding: 0.3em 0 0.2em 210px;
+    position: relative;
+}
+
+#footer p { font-size: 80% }
+
+/*
+ * Generic styling
+ */
+ul { list-style-image: url("/web/20150917094556im_/http://stats.ams-ix.net/graphics/bull-9.png") }
+
+h1, h2, h3 {
+    color: #333333;
+}
+
+h4, h5, h6 {
+    color: black;
+}
+
+hr {
+    border: none;
+    border-style: none;
+    height: 1px;
+}
+
+/* Our "normal" link colours. */
+a:link          { text-decoration: none }
+a:visited       { text-decoration: none }
+a:hover         { text-decoration: underline }
+
+/* Our "stealth" link colours. */
+a.stealthnav:link, a.stealthnav:visited, a.stealthnav:hover {
+    color: black;
+    text-decoration: none;
+    border-style: none;
+}
+
+/*
+     FILE ARCHIVED ON 09:45:56 Sep 17, 2015 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 09:57:35 Oct 31, 2024.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.361
+  exclusion.robots: 0.017
+  exclusion.robots.policy: 0.011
+  esindex: 0.006
+  cdx.remote: 7.691
+  LoadShardBlock: 308.073 (3)
+  PetaboxLoader3.datanode: 274.208 (6)
+  PetaboxLoader3.resolve: 88.768 (2)
+  load_resource: 156.601
+*/

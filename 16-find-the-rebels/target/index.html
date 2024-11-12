@@ -1,0 +1,140 @@
+
+
+<html>
+<title>TAMA Operating System</title>
+<style>
+
+    @font-face {
+        font-family: 'windowsFont';
+        src: url('/font_bsod.ttf');
+    }
+
+    body,input,button {
+        font-family: 'windowsFont';
+        color: #FFFF;
+        font-size: 22px;
+        background-color: black ;
+        padding: 30px;
+    }
+
+    #box {
+        color: white;
+        border: 1px solid white;
+        padding: 10px;
+        width: 600px;
+    }
+
+    #errorText {
+        color: yellow;
+    }
+
+    span {
+        margin-top: 20px;
+        background-color: #aaaaaa;
+        padding: 5px;
+        color: 0000aa;
+    }
+
+    .redText {
+        color: red;
+    }
+
+    .greenText {
+        color: rgb(0, 185, 0);
+    }
+
+    .blueText {
+        color: cyan
+    }
+
+    .smallText {
+        font-size: 16px;
+        font-stretch: condensed;
+        font-weight: 10px;
+    }
+
+    input {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: none;
+        background: transparent;
+        outline: none;
+        font-size: 16px;
+        font-weight: 12px;
+        padding: 0px;
+    }
+
+
+</style>
+<body>
+<br/>
+<center>
+
+    <b>
+<pre class="greenText">
+     _________    __  ______         ____ _____
+    /_  __/   |  /  |/  /   |       / __ / ___/
+     / / / /| | / /|_/ / /| |______/ / / \__ \ 
+    / / / ___ |/ /  / / ___ /_____/ /_/ ___/ / 
+   /_/ /_/  |_/_/  /_/_/  |_|     \____/____/  
+</pre>
+    </b>
+    <p class="redText smallText">32 T, The Next Generation</p>
+
+</center>
+<form action="/" method="post">
+    <p class="smallText">
+
+        ==> Enter "logon" followed by the ISO userid to continue.<br/>
+        ==> Enter "pass" followed by passphrase to continue.<br/>
+        ==> Press CTRL+ALT+DEL to restart your computer. If you do this,
+        you will lose any unsaved information in all open applications.<br/>
+        ==> logon <b><input id="usernameInput" type="text" name="username" class="loginField" autocomplete="off"></input></b><br/>
+        ==> pass <b><input id="passwordInput" type="password" name="password" class="loginField" autocomplete="off"></input></b><br/><br/>
+    </p>
+</form>
+<script>
+    document.getElementById('passwordInput').addEventListener("keyup", (event) => {
+
+        // If enter pressed
+        if (event.keyCode == 13) {
+
+            const password = document.getElementById('passwordInput').value;
+            const username = document.getElementById('usernameInput').value;
+
+            const response = fetch('/',
+                {
+                    method: "POST",
+                    headers: {
+                        'Content-Type':'application/json'
+                    },
+                    body: JSON.stringify({
+                        username: username,
+                        password: password,
+                        type: "user"
+                    })
+                });
+            response.then((response) => {
+
+                if (response.status != 200) {
+                    alert("Invalid request sent to the server!")
+                }
+                else {
+                    response.text().then((data) => {
+
+                        alert(data);
+                    })
+                }
+            })
+        }
+    });
+</script>
+
+<center>
+    <p class="smallText blueText">
+        PE1/PF13 ==> Help                   PF3/PF15 ==> Logoff                   PA1 ==> Attention    PA2 ==> Reshow
+    </p>
+</center>
+</body>
+</html>

@@ -1,0 +1,104 @@
+/*
+    @(#)$Id: note.css 21 2013-10-23 13:19:09Z steven $
+
+    Copyright (c) AMS-IX B.V.; all rights reserved.
+
+    sb:12.05.2010
+
+    CSS specs for the AMS-IX web site.
+ */
+
+/* admonition start -- shamelessly ripped from Moin's stylesheets */
+
+div.tip       { background-image: url("/web/20150917094556im_/http://stats.ams-ix.net/graphics/note/admon-tip.png");       }
+div.note      { background-image: url("/web/20150917094556im_/http://stats.ams-ix.net/graphics/note/admon-note.png");      }
+div.important { background-image: url("/web/20150917094556im_/http://stats.ams-ix.net/graphics/note/admon-important.png"); }
+div.caution   { background-image: url("/web/20150917094556im_/http://stats.ams-ix.net/graphics/note/admon-caution.png");   }
+div.warning   { background-image: url("/web/20150917094556im_/http://stats.ams-ix.net/graphics/note/admon-warning.png");   }
+
+div.caution,
+div.important,
+div.note,
+div.tip,
+div.warning {
+    display: table;
+    border: 1pt solid #e5e5e5;
+    background-color: #f9f9ff;
+    color: black;
+
+    margin: 10pt 30pt 10pt 30pt;
+    background-repeat: no-repeat;
+    /* Icons are 32x32 */
+    background-position: 8px 8px;
+    padding: 16px 2ex 16px 48px;
+}
+
+div.caution p:first-child,
+div.important p:first-child,
+div.note p:first-child,
+div.tip p:first-child,
+div.warning p:first-child {
+    font-weight: bold;
+}
+
+/* Same stuff, only smaller... */
+
+div.tip-small {
+    background-image: url("/web/20150917094556im_/http://stats.ams-ix.net/graphics/note/admon-tip-small.png");       }
+div.note-small {
+    background-image: url("/web/20150917094556im_/http://stats.ams-ix.net/graphics/note/admon-note-small.png");      }
+div.important-small {
+    background-image: url("/web/20150917094556im_/http://stats.ams-ix.net/graphics/note/admon-important-small.png"); }
+div.caution-small {
+    background-image: url("/web/20150917094556im_/http://stats.ams-ix.net/graphics/note/admon-caution-small.png");   }
+div.warning-small {
+    background-image: url("/web/20150917094556im_/http://stats.ams-ix.net/graphics/note/admon-warning-small.png");   }
+
+div.caution-small,
+div.important-small,
+div.note-small,
+div.tip-small,
+div.warning-small {
+    display: table;
+    border: 1pt solid #e5e5e5;
+    background-color: #f9f9ff;
+    color: black;
+
+    font-size: 80%;
+    margin: 10pt 30pt 10pt 30pt;
+    background-repeat: no-repeat;
+    /* Icons are 16x16 */
+    background-position: 6px 8px;
+    padding: 10px 2ex 10px 28px;
+}
+
+div.caution-small p:first-child,
+div.important-small p:first-child,
+div.note-small p:first-child,
+div.tip-small p:first-child,
+div.warning-small p:first-child {
+    font-weight: bold;
+}
+
+/* admonition end */
+
+/*
+     FILE ARCHIVED ON 09:45:56 Sep 17, 2015 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 09:57:50 Oct 31, 2024.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.506
+  exclusion.robots: 0.022
+  exclusion.robots.policy: 0.014
+  esindex: 0.011
+  cdx.remote: 18.943
+  LoadShardBlock: 271.895 (3)
+  PetaboxLoader3.datanode: 224.122 (6)
+  PetaboxLoader3.resolve: 112.501 (2)
+  load_resource: 105.771
+*/

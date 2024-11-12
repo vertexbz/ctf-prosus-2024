@@ -1,0 +1,7 @@
+https://web.archive.org/web/20150917094553cs_/http://stats.ams-ix.net/css/styles/general.css
+https://web.archive.org/web/20150917094553cs_/http://stats.ams-ix.net/css/styles/navigation.css
+https://web.archive.org/web/20150917094553cs_/http://stats.ams-ix.net/css/styles/content.css
+https://web.archive.org/web/20150917094553cs_/http://stats.ams-ix.net/css/styles/note.css
+https://web.archive.org/web/20150917094553cs_/http://stats.ams-ix.net/css/styles/fancy_table.css
+https://web.archive.org/web/20150917094553cs_/http://stats.ams-ix.net/css/styles/clearfix.css
+https://web.archive.org/web/20150917094553cs_/http://stats.ams-ix.net/css/styles/forms.css

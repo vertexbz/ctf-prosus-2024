@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "object-assign": "^4.1.1",
+    "path": "^0.12.7"
+  }
+}

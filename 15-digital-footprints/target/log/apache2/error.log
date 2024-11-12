@@ -1,0 +1,24 @@
+[Mon May 3 10:15:20 1997] [error] [client 192.168.1.100] File does not exist: /var/www/html/nonexistent-page.html
+[Mon May 3 10:20:45 1997] [error] [client 192.168.1.101] PHP Warning:  Division by zero in /var/www/html/index.php on line 15
+[Mon May 3 10:25:18 1997] [warn] [client 192.168.1.102] mod_fcgid: process /var/www/cgi-bin/script.fcgi(12345) exit(server exited), terminated by calling exit(), return code: 0
+[Mon May 3 10:30:02 1997] [error] [client 192.168.1.103] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.php,index.html,index.htm) found, and server-generated directory index forbidden by Options directive
+[Mon May 3 10:35:59 1997] [error] [client 192.168.1.104] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 20480 bytes) in /var/www/html/bigscript.php on line 53
+[Mon May 3 10:40:10 1997] [error] [client 192.168.1.105] File does not exist: /var/www/html/favicon.ico
+[Mon May 3 10:45:32 1997] [error] [client 192.168.1.106] PHP Parse error:  syntax error, unexpected '<' in /var/www/html/invalid-script.php on line 27
+[Mon May 3 10:50:19 1997] [error] [client 192.168.1.107] AH00124: Request exceeded the limit of 10 internal redirects due to probable configuration error. Use 'LimitInternalRecursion' to increase the limit if necessary. Use 'LogLevel debug' to get a backtrace.
+[Mon May 3 10:55:44 1997] [error] [client 192.168.1.108] PHP Notice:  Undefined variable: user in /var/www/html/user-profile.php on line 12
+[Mon May 3 11:00:05 1997] [error] [client 192.168.1.109] client denied by server configuration: /var/www/html/admin-panel.php
+[Mon May 3 11:05:21 1997] [error] [client 192.168.1.110] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/data-processing.php on line 37
+[Mon May 3 11:10:38 1997] [error] [client 192.168.1.111] File does not exist: /var/www/html/images/banner.jpg
+[Mon May 3 11:15:50 1997] [error] [client 192.168.1.112] AH01630: client denied by server configuration: /var/www/html/.git/config
+[Mon May 3 11:20:03 1997] [error] [client 192.168.1.113] PHP Fatal error:  Uncaught Error: Call to undefined function perform_action() in /var/www/html/action.php:45
+Stack trace:
+#0 {main}
+  thrown in /var/www/html/action.php on line 45
+[Mon May 3 11:25:29 1997] [error] [client 192.168.1.114] File does not exist: /var/www/html/assets/css/style.css
+[Mon May 3 11:30:17 1997] [error] [client 192.168.1.115] AH01797: client denied by server configuration: /var/www/html/.env
+[Mon May 3 11:35:06 1997] [error] [client 192.168.1.116] PHP Warning:  require(includes/config.php): failed to open stream: No such file or directory in /var/www/html/index.php on line 8
+[Mon May 3 11:40:54 1997] [error] [client 192.168.1.117] PHP Fatal error:  Uncaught Error: Call to undefined function() in /var/www/html/missing-function.php:22
+Stack trace:
+#0 {main}
+  thrown in /var/www/html/missing-function.php on line 22

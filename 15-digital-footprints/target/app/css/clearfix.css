@@ -1,0 +1,49 @@
+/*
+ * @(#)$Id: clearfix.css 1 2012-11-15 10:50:30Z steven $
+ *
+ * Wrap floating elements in a div and make sure the page extends
+ * around the whole thing.
+ *
+ */
+
+.clearfix:after {
+        content: ".";
+        display: block;
+        clear: both;
+        visibility: hidden;
+        line-height: 0;
+        height: 0;
+}
+
+.clearfix {
+        display: inline-block;
+}
+
+html[xmlns] .clearfix {
+        display: block;
+}
+
+* html .clearfix {
+        height: 1%;
+}
+
+/*
+     FILE ARCHIVED ON 09:45:57 Sep 17, 2015 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 09:57:58 Oct 31, 2024.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.474
+  exclusion.robots: 0.025
+  exclusion.robots.policy: 0.015
+  esindex: 0.009
+  cdx.remote: 6.91
+  LoadShardBlock: 171.639 (3)
+  PetaboxLoader3.datanode: 117.256 (6)
+  PetaboxLoader3.resolve: 76.712 (2)
+  load_resource: 52.93
+*/

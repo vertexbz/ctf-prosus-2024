@@ -1,0 +1,85 @@
+/*
+    @(#)$Id: fancy_table.css 1 2012-11-15 10:50:30Z steven $
+
+    Copyright (c) AMS-IX B.V.; all rights reserved.
+
+    sb:14.09.2004
+
+    Fancy table
+    To apply this style to a table:
+
+	<table class="fancy"> ... </table>
+*/
+
+table.fancy {
+    border: 1px solid #404040;
+    border-collapse: collapse;
+    border-spacing: 0pt;
+    background-color: #e0e0e0;
+}
+
+table.fancy tr		{ background-color: #fafafa }
+table.fancy tr.alt	{ background-color: #efeffa }
+
+table.fancy td, table.fancy th {
+    border: 1px ridge #e0e0e0;
+    padding: 2px;
+}
+
+table.fancy td.form, table.fancy th.form {
+    border-left: none;
+    border-right: none;
+    padding: 2px;
+}
+
+table.fancy td.distance {
+    text-align: right;
+    border-right: none;
+}
+table.fancy td.unit {
+    border-left: none;
+    margin-left: 0;
+}
+
+table.fancy th {
+    background-color: #d0d0d0;
+    color: #404040;
+    text-align: left;
+    font-weight: bold;
+}
+
+/* ======================================================================== */
+table.fancy td.lhalf, table.fancy th.lhalf {
+    text-align: right;
+	border-right: none;
+	padding-right:0;
+	margin-right:0;
+}
+
+table.fancy td.rhalf, table.fancy th.rhalf {
+    text-align: left;
+	border-left: none;
+	padding-left:0;
+	margin-left:0;
+}
+
+/*
+     FILE ARCHIVED ON 09:45:57 Sep 17, 2015 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 09:57:53 Oct 31, 2024.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.475
+  exclusion.robots: 0.025
+  exclusion.robots.policy: 0.015
+  esindex: 0.009
+  cdx.remote: 10.092
+  LoadShardBlock: 115.685 (3)
+  PetaboxLoader3.datanode: 136.166 (6)
+  load_resource: 199.26
+  PetaboxLoader3.resolve: 151.016
+*/

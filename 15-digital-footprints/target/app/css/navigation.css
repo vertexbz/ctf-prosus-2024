@@ -1,0 +1,156 @@
+/*
+    @(#)$Id: navigation.css 14 2013-04-16 10:06:16Z steven $
+
+    Copyright (c) AMS-IX B.V.; all rights reserved.
+
+    sb:18.05.2010
+
+    CSS specs for the AMS-IX web site.
+ */
+
+
+/*
+ * The "topnav" layer shows top-level navigation items in a horizontal
+ * layout. "Home", "Members", "FAQ", etc.
+ */
+#topnav {
+    position: relative;
+    height: 40px;
+    width: 100%;
+    z-index: 2;
+}
+
+#topnav #navlinks {
+    vertical-align: center;
+    margin: 13px 0 0 20px;
+}
+#topnav #navlinks a#link-login, a#link-logout {
+    text-transform: uppercase;
+}
+#topnav a {
+    color: #ffffff;
+    font-size: 11px;
+    padding: 8px 5px 8px 5px;
+    margin: 0 0 0 0;
+    text-decoration: none;
+    font-weight: bold;
+}
+#topnav a:hover {
+    background-clip: border-box;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+}
+
+#topnav a.active, #topnav a.active:hover {
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+}
+
+/*
+ * The "breadcrumb" layer shows the navigation hierarchy.
+ * Simple stuff, like: ">> Main >> Members >> Service Centre"
+ */
+.breadcrumb {
+    margin-left: 10px;
+	border-style: none;
+	font-size: small;
+}
+
+/*
+ * Section menu is a block on the left side of the page with
+ * links.
+ */
+.section-menu {
+    margin-top: 20px;
+    margin-left: 10px;
+    min-width: 190px;
+    line-height: 20px;
+    min-height: 200px;
+}
+
+/* 
+ * Don't play with list-style, rather work more reliably with
+ * "background-image". That allows us to control spacing between
+ * the "bullet" and the item text.
+ * See: http://css.maxdesign.com.au/listamatic/vertical05.htm
+ */
+.section-menu ul {
+    vertical-align: top;
+    margin: 0;
+    padding: 0 10px 0 1em;
+    list-style: none outside;
+}
+
+.section-menu li {
+    padding-left: 12px;
+    font-size: 8pt;
+    font-weight: bold;
+}
+
+.section-menu li.h1 {
+    background-image: url("/web/20150917094556im_/http://stats.ams-ix.net/graphics/arrows/1downarrow-10.png");
+    background-repeat: no-repeat;
+    background-position: 0 0.5em;
+
+    margin-left: -1em;
+}
+
+.section-menu li.h1 a.active {
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.section-menu li.h2 {
+    font-weight: bold;
+}
+
+.section-menu li.hr hr {
+    margin-top: 0.5em;
+    margin-bottom: 0.25em;
+}
+
+.section-menu li.hr hr {
+    background-color: #cccccc;
+    color: #cccccc;
+    border: none;
+    height: 1px;
+}
+
+.section-menu li.with-sub {
+    background-image: url("/web/20150917094556im_/http://stats.ams-ix.net/graphics/arrows/1rightarrow-10.png");
+    background-repeat: no-repeat;
+    background-position: 0 0.5em;
+}
+
+.section-menu a {
+    text-decoration: none;
+}
+.section-menu a:hover {
+	text-decoration: underline;
+}
+
+.section-menu a.active {
+    text-decoration: underline;
+    font-style: italic;
+}
+
+/*
+     FILE ARCHIVED ON 09:45:56 Sep 17, 2015 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 09:57:41 Oct 31, 2024.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.498
+  exclusion.robots: 0.024
+  exclusion.robots.policy: 0.015
+  esindex: 0.009
+  cdx.remote: 12.032
+  LoadShardBlock: 256.166 (3)
+  PetaboxLoader3.datanode: 203.571 (4)
+  PetaboxLoader3.resolve: 275.285 (2)
+  load_resource: 238.722
+*/
