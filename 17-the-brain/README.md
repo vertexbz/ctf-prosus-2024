@@ -1,8 +1,9 @@
-# Shellcode Injection Exploit
+# ROP Chain attack / Stack forgery
 
 - https://www.corelan.be/index.php/2009/07/19/exploit-writing-tutorial-part-1-stack-based-overflows/
 - [Ghidra](https://ghidra-sre.org) (https://formulae.brew.sh/cask/ghidra)
 - https://www.sourceware.org/gdb/
+- https://www.apriorit.com/dev-blog/434-rop-exploit-protection
 
 ## Requirements
 - docker
